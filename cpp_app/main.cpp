@@ -3,6 +3,8 @@
 #include <algorithm> // Required for next_permutation
 #include <climits>   // Required for INT_MAX
 #include <cstdlib> // rand(), srand()
+#include "tsp.h"
+
 
 using namespace std;
 
@@ -41,8 +43,11 @@ int main()
         }
         cout << endl;
     }
+    cout << "Distance matrix generated for " << V << " cities." << endl;
+
+    // Call the test function from the other file
+    testSolverConnection();
+
+
     return 0;
 }
-
-//distance matrix is now created for a specific number of cities
-
