@@ -44,11 +44,14 @@ int main()
     }
     cout << "Distance matrix generated for " << V << " cities." << endl;
 
-    // Call the test function from the other file
-    testSolverConnection();
+    // get greedy solution
+    std::vector<int> resultRoute = solveTSP_greedy(arr);
 
-
-    std::vector<int> resultRoute = solveTSP(arr);
+    cout << "shortest path of the TSP greedy is: ";
+    for (size_t i = 0; i < resultRoute.size(); ++i) {
+        cout << resultRoute[i] << (i + 1 < resultRoute.size() ? " " : "");
+    }
+    cout << endl;
 
     return 0;
 }
