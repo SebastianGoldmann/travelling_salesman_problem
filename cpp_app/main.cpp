@@ -7,18 +7,19 @@
 
 using namespace std;
 
-// define number of cities
-const int V = 10;
 
-//create distance matrix
-// Create a V x V matrix filled with 0.0
-std::vector<std::vector<double>> arr(V, std::vector<double>(V, 0.0));
-
-
-// generate a random distance matrix
-int main() 
+int main()
 {
+
+    // define number of cities
+    const int V = 10;
+
+    // Create a V x V matrix filled with 0.0
+    std::vector<std::vector<double>> arr(V, std::vector<double>(V, 0.0));
+
+    // generate a random distance matrix
     srand(42);
+
     cout << "Number of cities in simulation: " << V << endl;
 
     cout << "Iniatlized empty matrix: " << endl;

@@ -3,8 +3,6 @@
 #include <algorithm>
 
 
-
-
 TSPResult solveTSP_greedy(const std::vector<std::vector<double>>& dist) {
     // we start at city 0
 
@@ -60,4 +58,11 @@ TSPResult solveTSP_greedy(const std::vector<std::vector<double>>& dist) {
     std::cout << "Total cost of greedy tour: " << total_cost << std::endl;
 
     return {tour, total_cost}; 
+}
+
+
+
+TSPResult solveTSP_optim(const std::vector<std::vector<double>>& dist){
+
+    
 }
