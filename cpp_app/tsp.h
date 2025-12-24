@@ -3,10 +3,13 @@
 
 #include <vector>
 
-// Existing solver declaration
-std::vector<int> solveTSP_greedy(const std::vector<std::vector<double>>& dist);
+// 1. Define the struct so both tsp.cpp and main.cpp can see it
+struct TSPResult {
+    std::vector<int> tour;
+    double total_cost;
+};
 
-// New test function
-void testSolverConnection();
+// 2. Update the function prototype to return the struct
+TSPResult solveTSP_greedy(const std::vector<std::vector<double>>& dist);
 
 #endif

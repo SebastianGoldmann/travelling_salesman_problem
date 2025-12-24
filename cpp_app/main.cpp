@@ -8,7 +8,7 @@
 using namespace std;
 
 // define number of cities
-const int V = 4;
+const int V = 10;
 
 //create distance matrix
 // Create a V x V matrix filled with 0.0
@@ -45,13 +45,19 @@ int main()
     cout << "Distance matrix generated for " << V << " cities." << endl;
 
     // get greedy solution
-    std::vector<int> resultRoute = solveTSP_greedy(arr);
+    TSPResult resultRoute = solveTSP_greedy(arr);
 
-    cout << "shortest path of the TSP greedy is: ";
-    for (size_t i = 0; i < resultRoute.size(); ++i) {
-        cout << resultRoute[i] << (i + 1 < resultRoute.size() ? " " : "");
+    // 1. Print the total cost
+    std::cout << "Final Cost: " << resultRoute.total_cost << std::endl;
+
+    // 2. Print the path (looping through the vector inside the struct)
+    for (size_t i = 0; i < resultRoute.tour.size(); ++i) {
+        std::cout << resultRoute.tour[i];
+        if (i < resultRoute.tour.size() - 1) {
+            std::cout << " -> ";
+        }
     }
-    cout << endl;
+    std::cout << std::endl;
 
     return 0;
 }
