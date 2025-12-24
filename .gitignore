@@ -1,44 +1,4 @@
 # --- Compiled Binaries & Objects ---
-*.exe
-*.out
-*.app
-*.o
-*.obj
-
-# --- Static and Dynamic Libraries ---
-*.a
-*.lib
-*.so
-*.dylib
-*.dll
-
-# --- Build Directories ---
-# Common folders for CMake and manual builds
 bin/
-build/
-dist/
-out/
-x64/
-Debug/
-Release/
 
-# --- IDE Specifics ---
-# Visual Studio
-.vs/
-*.user
-*.suo
-*.sln.docstates
-
-# VS Code
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-
-# Xcode
-*.xcodeproj/
-*.xcworkspace/
-
-# --- Temporary/Log Files ---
-*.log
-*.tmp
