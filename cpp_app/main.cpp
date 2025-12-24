@@ -5,15 +5,14 @@
 #include <cstdlib> // rand(), srand()
 #include "tsp.h"
 
-
 using namespace std;
-
 
 // define number of cities
 const int V = 4;
 
 //create distance matrix
-int arr[V][V] = {0};
+// Create a V x V matrix filled with 0.0
+std::vector<std::vector<double>> arr(V, std::vector<double>(V, 0.0));
 
 
 // generate a random distance matrix
@@ -48,6 +47,8 @@ int main()
     // Call the test function from the other file
     testSolverConnection();
 
+
+    std::vector<int> resultRoute = solveTSP(arr);
 
     return 0;
 }
